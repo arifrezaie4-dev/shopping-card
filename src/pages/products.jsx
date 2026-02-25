@@ -1,26 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../Redux/cartSlice";
-import { useState } from "react";
 
 export const Products = () => {
   const items = useSelector((state) => state.product.items);
   // const cart = useSelector((state) => state.cart.items)
-  const [showAlert, setShowAlert] = useState(false)
   const handleAdd = (product) => {
     dispatch(addToCart(product))
-    setShowAlert(true)
-    setTimeout(() => {
-      setShowAlert(false)
-    }, 1000);
   }
   
   const dispatch = useDispatch()
   return (
     <div className="container mx-auto mt-15 px-4 ">
       <div className="row">
-        {showAlert&&(
-          <div className="alert alert-success mt-2">Product added successfully!</div>
-        )}
         {items &&
           items.map((product) => (
             <div className="card col-md" key={product.id}>

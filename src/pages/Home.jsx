@@ -4,7 +4,7 @@ export const Home = () => {
       <div className="container mt-5">
         <div className="row text-center">
           <div className="col-md-12">
-            <h2>the winner is who remains in field</h2>
+            <h2>Shopping-Card Application</h2>
             <p className="mt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consectetur numquam quo incidunt totam id quisquam facere laborum
