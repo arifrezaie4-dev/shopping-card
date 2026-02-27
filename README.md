@@ -39,7 +39,7 @@ Users can browse products, add items to their cart, update quantities, and see t
 ![Mobile View](./screenshots/Mobile.PNG)
 
 ## 📂 Project Structure
-
+```
 shopping-cart/
 │
 ├── public/
@@ -59,7 +59,7 @@ shopping-cart/
 ├── package.json
 ├── package-lock.json
 └── README.md
-
+```
 ## ⭐ Support
 
 If you have any questions, suggestions, or issues, feel free to:
