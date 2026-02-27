@@ -30,7 +30,7 @@ Users can browse products, add items to their cart, update quantities, and see t
 ## 📸 Screenshots
 
 ### Product Page
-![Home Page](./screenshots/product.PNG)
+![product Page](./screenshots/product.PNG)
 
 ### Cart Page
 ![Cart Page](./screenshots/Cart.PNG)
