@@ -40,7 +40,7 @@ Users can browse products, add items to their cart, update quantities, and see t
 
 ## 📂 Project Structure
 
-shopping-card/
+shopping-cart/
 │
 ├── public/
 │
@@ -53,8 +53,8 @@ shopping-card/
 │
 ├── screenshots/
 │   ├── product.png
-│   ├── Cart.png
-│   └── Mobile.png
+│   ├── cart.png
+│   └── mobile.png
 │
 ├── package.json
 ├── package-lock.json
