@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import Swal from "sweetalert2";
 const saveState = (state) => {
   localStorage.setItem("cart", JSON.stringify(state));
-  console.log(localStorage);
 };
 const loadState = () => {
   const storage = localStorage.getItem("cart");
