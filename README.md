@@ -30,13 +30,13 @@ Users can browse products, add items to their cart, update quantities, and see t
 ## 📸 Screenshots
 
 ### Product Page
-![Home Page](./screenshots/product.png)
+![Home Page](./screenshots/product.PNG)
 
 ### Cart Page
-![Cart Page](./screenshots/Cart.png)
+![Cart Page](./screenshots/Cart.PNG)
 
 ### Mobile View
-![Mobile View](./screenshots/Mobile.png)
+![Mobile View](./screenshots/Mobile.PNG)
 
 ## 📂 Project Structure
 
