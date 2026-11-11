@@ -1,14 +1,14 @@
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../Redux/cartSlice";
+import { useAppDispatch, useAppSelector } from "../../lib/hooks";
+import { addToCart } from "../../lib/features/cart/cartSlice";
 
 export const Products = () => {
-  const items = useSelector((state) => state.product.items);
+  const items = useAppSelector((state) => state.product.items);
   // const cart = useSelector((state) => state.cart.items)
   const handleAdd = (product) => {
     dispatch(addToCart(product))
   }
   
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   return (
     <div className="container mx-auto mt-15 px-4 ">
       <div className="row">

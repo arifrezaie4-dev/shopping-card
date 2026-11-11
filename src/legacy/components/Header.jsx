@@ -1,8 +1,8 @@
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../lib/hooks";
 import { Link, NavLink } from "react-router";
 
 export const Header = () => {
-  const cartItems = useSelector((state) => state.cart.items)
+  const cartItems = useAppSelector((state) => state.cart.items)
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">

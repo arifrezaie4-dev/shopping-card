@@ -1,70 +1,55 @@
-# 🛒 Shopping Cart
+# Shopping Cart
 
-A modern and responsive shopping cart web application built with **React** and **Redux Toolkit**.  
-Users can browse products, add items to their cart, update quantities, and see the total price dynamically.
+A shopping cart application being migrated to Next.js with the App Router,
+strict TypeScript, Tailwind CSS, and Redux Toolkit.
 
----
+## Current migration phase
 
-## 🚀 Features
+Phase 1 establishes the Next.js foundation. The home route is a small scaffold;
+the product listing and cart UI will be migrated in a later phase. Existing UI
+source is retained under `src/legacy` while it awaits migration. The existing
+product images remain in `public/images`.
 
-- 🛍️ Display list of products
-- ➕ Add products to cart
-- ➖ Remove products from cart
-- 🔢 Update item quantity
-- 💰 Dynamic total price calculation
-- 📱 Responsive design
-- ⚡ State management with Redux Toolkit
+## Stack
 
----
+- Next.js App Router
+- TypeScript with strict mode
+- Tailwind CSS 4 through its PostCSS integration
+- Redux Toolkit and React Redux
 
-## 🛠️ Built With
+The Redux store is created per provider instance. Cart storage is read and
+written only in client-side effects; reducers contain no browser storage or UI
+side effects. Invalid or unavailable stored data is reported in the browser
+console and does not prevent the application from starting.
 
-- React
-- Redux Toolkit
-- JavaScript (ES6+)
-- CSS
-- Vite / Create React App
+## Development
 
----
-
-## 📸 Screenshots
-
-### Product Page
-![Home Page](./screenshots/product.PNG)
-
-### Cart Page
-![Cart Page](./screenshots/Cart.PNG)
-
-### Mobile View
-![Mobile View](./screenshots/Mobile.PNG)
-
-## 📂 Project Structure
+```sh
+npm install
+npm run dev
 ```
-shopping-cart/
-│
-├── public/
-│
-├── src/
-│   ├── components/
-│   ├── features/
-│   ├── store/
-│   ├── App.jsx
-│   └── main.jsx
-│
-├── screenshots/
-│   ├── product.png
-│   ├── cart.png
-│   └── mobile.png
-│
-├── package.json
-├── package-lock.json
-└── README.md
+
+Available checks:
+
+```sh
+npm run build
+npm run lint
+npm run typecheck
 ```
-## ⭐ Support
 
-If you have any questions, suggestions, or issues, feel free to:
+## Structure
 
-- Open an issue in this repository
-- Contact me via GitHub: https://github.com/arifrezaie4-dev
-
-If you found this project helpful, consider giving it a ⭐ on GitHub!
+```text
+src/
+  app/                 App Router layout, home scaffold, styles, providers
+  data/products.ts     Typed local product catalog
+  lib/
+    features/          Redux Toolkit slices
+    cart-storage.ts    Client-side cart persistence helpers
+    hooks.ts           Typed Redux hooks
+    store.ts           Per-provider Redux store factory
+  legacy/              Existing UI retained for the next migration phase
+  types/product.ts     Product and cart item types
+public/
+  images/              Existing product images
+```

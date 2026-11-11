@@ -1,10 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment, removeCart, removeFromCart } from "../Redux/cartSlice";
+import { useAppDispatch, useAppSelector } from "../../lib/hooks";
+import { decrement, increment, removeCart, removeFromCart } from "../../lib/features/cart/cartSlice";
 import { Link } from "react-router";
 
 export const Cart = () => {
-  const items = useSelector((state) => state.cart.items);
-  const dispatch = useDispatch();
+  const items = useAppSelector((state) => state.cart.items);
+  const dispatch = useAppDispatch();
   if (items.length == 0) {
     return (
       <div className="container" style={{ marginTop: "180px" }}>
