@@ -5,10 +5,10 @@ strict TypeScript, Tailwind CSS, and Redux Toolkit.
 
 ## Current migration phase
 
-Phase 1 establishes the Next.js foundation. The home route is a small scaffold;
-the product listing and cart UI will be migrated in a later phase. Existing UI
-source is retained under `src/legacy` while it awaits migration. The existing
-product images remain in `public/images`.
+Phase 2 migrates the responsive home and product listing pages to the Next.js
+App Router. The shared header and product actions use the existing Redux store;
+the cart page remains in `src/legacy` for a later phase. Existing UI source is
+retained under `src/legacy`, and product images remain in `public/images`.
 
 ## Stack
 
@@ -41,7 +41,8 @@ npm run typecheck
 
 ```text
 src/
-  app/                 App Router layout, home scaffold, styles, providers
+  app/                 App Router layout, home and products pages, styles, providers
+  components/           Shared header and reusable product components
   data/products.ts     Typed local product catalog
   lib/
     features/          Redux Toolkit slices
